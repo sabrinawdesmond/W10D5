@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <GalleryNavigation galleries={harvardArt.records} /> 
-      <Route path="/galleries/:galleryID" component={NavLink}/>
+      <Route path="/galleries/:galleryid" component={NavLink}/>
 
     </div>
   );

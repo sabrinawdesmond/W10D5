@@ -10,7 +10,7 @@ const NavLink = (props) => {
     )
   })
   return (
-    <ul>
+    
       {galleryList}
     </ul>
   )
