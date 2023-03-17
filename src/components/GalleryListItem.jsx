@@ -1,5 +1,4 @@
 import React from 'react';
-// import NavLink from './NavLink';
 import { NavLink } from 'react-router-dom';
 
 function GalleryListItem(props) {
@@ -8,13 +7,13 @@ function GalleryListItem(props) {
       <NavLink 
         to={`/galleries/${props.galleryid}`}
         className='gallery-item'
+
         galleries={props}
-      > 
-
-
-      </NavLink>
-    
+        
+      > {props.gallery.name}
+      </NavLink>   
 
     </li>
   )
-}
+};
+export default GalleryListItem;

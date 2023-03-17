@@ -1,9 +1,15 @@
 import React from "react";
 import {NavLink} from 'react-router-dom';
+import GalleryListItem from '../GalleryListItem'
 
 const GalleryNavigation = (props) => {
   const {galleries} = props
   console.log(galleries)
+  const galleryList = galleries.map((gallery) => {
+    return (
+      <GalleryListItem key={galleries.galleryid} gallery={gallery} />
+    )
+  })
   return (
     <>
     <nav>
@@ -12,7 +18,12 @@ const GalleryNavigation = (props) => {
           to='/'
         >Home</NavLink>
     </nav>
-    <NavLink></NavLink>
+    
+    <NavLink
+      to={`/galleries/${props.galleryid}`}
+    >
+      {galleryList}
+    </NavLink>
     </>
   )
 }
