@@ -1,10 +1,15 @@
 import harvardArt from './data/harvardArt';
 import GalleryNavigation from './components/GalleryNavigation/index.js';
+import NavLink from './components/NavLink';
+import {Route} from 'react-router-dom';
 
 function App() {
   return (
-    // <h1>Hello from App</h1>
-    <GalleryNavigation galleries={harvardArt.records} /> 
+    <div>
+      <GalleryNavigation galleries={harvardArt.records} /> 
+      <Route path="/galleries/:galleryID" component={NavLink}/>
+
+    </div>
   );
 }
 
